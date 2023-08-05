@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <!-- icon CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <style>
+    body{
+      overflow-x: hidden;
+    }
+    .bg-blue {
+      background: #116a9e;
+    }
+
+    .blue {
+      color: #116a9e;
+    }
+
+    nav a img {
+      width: 10rem;
+    }
+
+    .bg-lg-blue {
+      background: #38acc9;
+      ;
+    }
+
+    .bg-img {
+      width: 100%;
+      height: 100%;
+      background-image: url("img/images09.gif");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .card-img {
+      transform: scale(1);
+      width: 100%;
+      height: 100%;
+      transition: transform 0.1s ease-in-out;
+      /* Add a smooth transition effect */
+    }
+
+    .card-img:hover {
+      transform: scale(1.05);
+    }
+
+    .t-dark {
+      color: #888;
+    }
+
+    .t-dark:hover {
+      color: #FFFF;
+    }
+
+    .fs-10 {
+      font-size: 3rem;
+      color: #38acc9;
+    }
+
+    .bg-g {
+      background-color: #f3f5f5;
+    }
+
+    .f-12 {
+      font-size: 12px;
+    }
+
+    .f-14 {
+      font-size: 14px;
+    }
+  </style>
+
+  <title>Hello, world!</title>
+</head>
+
+<body >
+  <!-- Nav-bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-blue p-0 m-0">
+    <div class="container-fluid p-0 m-0">
+      <a class="navbar-brand" href="#"><img src="img/images01.svg" alt="img" class="img-fluid"
+          style="width: 8rem" /></a>
+      <a class="navbar-brand ms-auto" href="#"><img src="img/images03.gif" alt="img" class="img-fluid d-block"
+          style="width: 8rem; border-left: 1px solid white; padding: 1rem" /></a>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              LOANS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Personal loan</a></li>
+              <li><a class="dropdown-item" href="#">Home Load</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Car Loan</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              CARDS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              INVESTMENTS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div style="margin-right: 2rem;" class="d-flex justify-content-between align-items-center">
+        <div class="" style="margin-right: 1rem;">
+          <i class="bi bi-geo-alt  text-light  " style="font-size: 2rem;"></i>
+        </div>
+        <div class="d-flex align-items-center " style="padding-top: 8px;">
+          <h1 class="text-light  f-14">Track Application</h1>
+        </div>
+      </div>
+      <div class="py-4 d-flex align-items-center" style="width: 4rem">
+        <a class="my-auto f-14 text-light text-decoration-none" href="#">Login</a>
+      </div>
+      <!-- conva left button -->
+      <button class="btn blue ml-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+        aria-controls="offcanvasWithBothOptions">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+            Backdroped with scrolling
+          </h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>
+            Try scrolling the rest of the page to see this option in action.
+          </p>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- content section -->
+  <div class="container-fluid m-0 p-0 ">
+    <div class="row " style="height: 40rem;">
+      <div class="col-md-3 p-0">
+        <img src="/img/images12.png" class="img-fluid" alt="" style="width: 100%; height: 100%; object-fit:fill;" />
+      </div>
+      <div class="col-md-9 p-0">
+        <div class="bg-img d-flex flex-col justify-content-end align-items-center ">
+          <div class="  col-6  " style="max-width: 20rem;">
+            <h1 class="text-center fs-3">
+              Get your latest Experian credit report for free here
+            </h1>
+            <div class="text-center ">
+              <img src="/img/images10.gif" class="img-fluid w-100" alt="" />
+            </div>
+            <div class="text-center">
+              <p>
+                <img src="img/images11.png" class="img-fluid" alt="" />
+                <b>2,00,00,000+</b> people have got their Credit Scores for
+                FREE!!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bottom info section -->
+    <div class="bg-blue w-100 text-center d-flex justify-content-center align-items-center">
+      <div class="d-flex justify-content-center align-items-center text-light mx-auto">
+        <div class="mr-1" style="margin-right: 1rem">
+          <i class="fs-2 bi bi-recycle "></i>
+        </div>
+        <div>
+          <span class=""> 50+ Banks</span>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center text-light mx-auto">
+        <div class="mr-1" style="margin-right: 1rem">
+          <i class="fs-2 bi bi-stopwatch"></i>
+        </div>
+        <div>
+          <span class=""> Contactless KYC & Paperless Approval</span>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center text-light mx-auto">
+        <div class="mr-1" style="margin-right: 1rem">
+          <i class="fs-2 bi bi-person-circle"></i>
+        </div>
+        <div>
+          <span class=""> 5,00,00,000+ Happy Customers</span>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center text-light mx-auto">
+        <div class="mr-1" style="margin-right: 1rem">
+          <i class="fs-2 bi bi-gift"></i>
+        </div>
+        <div>
+          <span class="">Exclusive Offers & Rates</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- bottom items section -->
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center align-items-center">
+        <div class="col-2 d-flex flex-column text-center">
+          <i class="bi bi-credit-card blue fs-10"></i>
+          <p>Credit card</p>
+        </div>
+        <div class="col-2 d-flex flex-column text-center">
+          <i class="bi bi-heart blue fs-10"></i>
+          <p>Personal Loan</p>
+        </div>
+        <div class="col-2 d-flex flex-column text-center">
+          <i class="fs-10"><img src="img/images16.gif" alt="" /></i>
+          <p>Credit Score</p>
+        </div>
+        <div class="col-2 d-flex flex-column text-center">
+          <i class="bi bi-house blue fs-10"></i>
+          <p>Home Loan</p>
+        </div>
+        <div class="col-2 d-flex flex-column text-center">
+          <i class="bi bi-ev-front blue fs-10"></i>
+          <p>Car Loan</p>
+        </div>
+        <div class="col-2 d-flex flex-column text-center">
+          <i class="bi bi-calculator blue fs-10"></i>
+          <p>Calculators</p>
+        </div>
+      </div>
+    </div>
+    <!-- Heading -->
+    <div class="bg-g pt-4">
+      <div class="text-center">
+        <h1 class="fs-1 text-center">Get your latest Credit Score, FREE</h1>
+        <h1 class="fs-5 text-center text-secondary">
+          One powerful number that puts you in control
+        </h1>
+      </div>
+      <!-- Credit Section -->
+      <div class="row d-flex justify-content-center my-5">
+        <div class="col-md-3 mr-0"><img src="img/images17.png" alt="" /></div>
+        <div class="col-md-3 ml-4 my-auto">
+          <p>
+            <strong>Increase chances of application approval</strong> <br />
+            A score of 750+ boosts your chances of getting a loan/Credit Card
+          </p>
+          <p>
+            <strong>Better offers</strong> <br />
+            The better your score, the more offers you'll be eligible for
+          </p>
+          <p>
+            <strong>Take charge of your finances</strong> <br />
+            Understanding your score helps you take the right next steps
+          </p>
+          <button type="button" class="btn btn-danger w-100">
+            Get your FREE Credit Score
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trending Product -->
+    <!-- heading -->
+    <div class="bg-g pt-4 bg-white ">
+      <div class="text-center " style="padding-bottom: 2rem;">
+        <h1 class="fs-1 text-center">Trending Products</h1>
+        <h1 class="fs-5 text-center text-secondary">
+          Our picks for the hottest offers and coolest deals all in one place
+        </h1>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-3 mr-2 ">
+          <div class=""><img src="./img/images1.png" class="img-fluid card-img" alt=""></div>
+          <h5 class="fs-5 blue mt-2">Credit Card</h5>
+          <p class="fs-6 text-secondary">The best of lifetime-free, cashback cards & more with contactless KYC process.
+          </p>
+        </div>
+        <div class="col-md-3 mx-4 ">
+          <div><img src="./img/images2.png" class="img-fluid card-img" alt=""></div>
+          <h5 class="fs-5 blue mt-2">Quick Personal Loans</h5>
+          <p class="fs-6 text-secondary">Instant approval and paperless process.</p>
+        </div>
+        <div class="col-md-3 ">
+          <div><img src="img//images3.png" class="img-fluid card-img" alt=""></div>
+          <h5 class="fs-5 blue mt-2">Free Credit Score</h5>
+          <p class="fs-6 text-secondary">Get your free score in less than 3 minutes</p>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-3 ">
+          <div><img src="img/images4.png" a class="img-fluid card-img" lt=""></div>
+          <h5 class="fs-5 blue mt-2">Credit Card</h5>
+          <p class="fs-6 text-secondary">The best of lifetime-free, cashback cards & more </p>
+        </div>
+        <div class="col-md-3 mx-4 ">
+          <div><img src="img/images5.png" a class="img-fluid card-img" lt=""></div>
+          <h5 class="fs-5 blue">Quick Personal Loans</h5>
+          <p class="fs-6 text-secondary">Instant approval and paperless process.</p>
+        </div>
+        <div class="col-md-3 ">
+          <div><img src="img/images6.png" a class="img-fluid card-img" lt=""></div>
+          <h5 class="fs-5 blue mt-2">Free Credit Score</h5>
+          <p class="fs-6 text-secondary">Get your free score in less than 3 minutes</p>
+        </div>
+      </div>
+
+      <!-- Bank bazar -->
+      <div class="row bg-lg-blue py-4">
+        <div class="">
+          <h1 class="text-center text-white">Why BanKBazaar</h1>
+          <p class="text-center text-white">There's more then one reason to sing up with confidence</p>
+        </div>
+        <div class=" d-flex justify-content-center ">
+          <img src="/img//images20.png" alt="">
+        </div>
+
+      </div>
+
+      <div class="row  bg-lg-blue py-4" >
+        <div class=" d-flex justify-content-center ">
+          <img src="img/images21.png" class=" " alt="">
+        </div>
+      </div>
+      <div class="row pt-4" style="background: #3c3b3b;">
+        <div class="col-md-12 d-flex justify-content-center">
+          <div class="col-md-6 t-dark d-flex justify-content-between align-items-center ">
+            <p class="text-white f-12">LEARN MORE:</p>
+            <p class="t-dark f-12">Credit Cards</p>
+            <p class="t-dark f-12">Personal Loan</p>
+            <p class="t-dark f-12 align-self-center">Investments </p>
+            <p class="t-dark f-12">Account Savings</p>
+            <p class="t-dark f-12">Saving Schemes</p>
+            <p class="t-dark f-12">Life Insurance</p>
+            <p class="t-dark f-12">Health Insurance</p>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row d-flex justify-content-center   p-4" style="background: #424242;">
+        <div class="col-md-8 d-flex justify-content-between align-items-center">
+          <div class="">
+            <h1 class="text-light f-12">Home Loan</h1>
+            <p class=" t-dark m-0 f-12">SBI Home Loan</p>
+            <p class=" t-dark m-0 f-12">HDFC Home Loan</p>
+            <p class=" t-dark m-0 f-12">Axis Home Loan</p>
+          </div>
+          <div class="">
+            <h1 class=" text-light f-14">Personal Loan</h1>
+            <p class=" t-dark m-0 f-12">SBI Home Loan</p>
+            <p class=" t-dark m-0 f-12">HDFC Home Loan</p>
+            <p class=" t-dark m-0 f-12">Axis Home Loan</p>
+          </div>
+          <div class="">
+            <h1 class=" text-light f-14">Car Loan</h1>
+            <p class=" t-dark m-0 f-12">SBI Home Loan</p>
+            <p class=" t-dark m-0 f-12">HDFC Home Loan</p>
+            <p class=" t-dark m-0 f-12">Axis Home Loan</p>
+          </div>
+          <div class="">
+            <h1 class=" text-light f-14">Credit Card</h1>
+            <p class=" t-dark m-0 f-12">SBI Home Loan</p>
+            <p class=" t-dark m-0 f-12">HDFC Home Loan</p>
+            <p class=" t-dark m-0 f-12">Axis Home Loan</p>
+          </div>
+          <div class="">
+            <h1 class=" text-light f-14">Fixed Deposit</h1>
+            <p class=" t-dark m-0 f-12">SBI Home Loan</p>
+            <p class=" t-dark m-0 f-12">HDFC Home Loan</p>
+            <p class=" t-dark m-0 f-12">Axis Home Loan</p>
+          </div>
+          <div class="">
+            <h1 class=" text-light f-14">Calculator</h1>
+            <p class=" t-dark m-0 f-12">SBI Home Loan</p>
+            <p class=" t-dark m-0 f-12">HDFC Home Loan</p>
+            <p class=" t-dark m-0 f-12">Axis Home Loan</p>
+          </div>
+        </div>
+      </div>
+      <!-- footer-2 -->
+
+      <div class="row d-flex justify-content-center py-2" style="background: #424242; border: dotted #777;
+      border-width: 1px 0;">
+        <div class="col-md-8 d-flex justify-content-center gap-2">
+          <p class="f-12 t-dark " style="border-right: 1px solid white; padding-right: 1rem;">Other : CIBIL</p>
+          <p class="f-12 t-dark " style="border-right: 1px solid white; padding-right: 1rem;">Tax</p>
+          <p class="f-12 t-dark " style="border-right: 1px solid white; padding-right: 1rem;">Bank IFSC Code </p>
+          <p class="f-12 t-dark " style="border-right: 1px solid white; padding-right: 1rem;">Indian Holidays</p>
+          <p class="f-12 t-dark " style="border-right: 1px solid white; padding-right: 1rem;">Saving Schemes</p>
+          <p class="f-12 t-dark " style="border-right: 1px solid white; padding-right: 1rem;">In The News</p>
+        </div>
+      </div>
+      <!-- Ad section -->
+      <div class="row py-3 d-flex justify-content-center" style="background: #424242;">
+        <div class="col-md-6 d-flex justify-content-between">
+          <div class="d-flex flex-column">
+            <p class="f-12 text-white text-center" style="margin-bottom: 1rem;">Mobile App</p>
+            <img src="img/Background (3).png" alt="">
+          </div>
+
+          <div class="d-flex flex-column mx-4">
+            <div class="m-0"><p class="f-12 text-white m-0">Contact Us</p></div>
+            <div class="d-flex justify-content-between gap-2  align-items-center">
+              <div class="mt-0">
+                <i class="bi bi-envelope bg-white rounded-circle p-1  " style="font-size: 10px;"></i>
+              </div>
+             <div class="" style="margin-top: 1rem;" >
+              <p class="t-dark " style="font-size: 10px;">Support@chetu8055.come</p>
+             </div>
+              
+            </div>
+         
+          </div>
+          <div class="d-flex flex-column  ">
+            <p class="f-12 text-white m-1 text-center" >Follow Us</p>
+            <div class="d-inline " style="margin-top: 0.5rem;">
+              <div class="bg-white d-inline rounded-circle p-1 f-12 mx-1" ><i class="bi bi-twitter"></i></div>
+              <div class="bg-white d-inline rounded-circle p-1 f-12 mx-1"><i class="bi bi-linkedin"></i></div>
+              <div class="bg-white d-inline rounded-circle p-1 f-12 mx-1"><i class="bi bi-facebook"></i></div>
+              <div class="bg-white d-inline rounded-circle p-1 f-12 "><i class="bi bi-instagram"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- About section -->
+        <div class="row  py-2" style="background: #424242;">
+          <div class="d-flex justify-content-center gap-4 ">
+            <p class="f-12 m-0 t-dark">About </p>
+          <p class="f-12 m-0 t-dark">Careers</p>
+          <p class="f-12 m-0 t-dark">Contact Us</p>
+          <p class="f-12 m-0 t-dark">Blog</p>
+          <p class="f-12 m-0 t-dark">Terms</p>
+          <p class="f-12 m-0 t-dark">Notice to customers</p>
+          </div>
+        </div>
+        <!-- Copy right -->
+        <div style="background: #424242;">
+          <h1 class="text-center t-dark py-2 f-14">Copyright © 2023 BankBazaar.com. Privacy Policy</h1>
+        </div>
+      </div>
+
+
+
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
